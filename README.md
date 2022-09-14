@@ -1,5 +1,13 @@
+## TUGAS 2 PBP
+### Abby Marvel Immanuel Parasian Pribadi
+### 2106751796
+### PBP-A
+
+[Heroku: Tugas 2 Abby Marvel](https://tugas2abbymarvel.herokuapp.com/katalog/)
+
 1. Bagan request client
-![Diagram](Group 283.png)
+![Diagram](diagrampbp.png)
+
 
 2. Penjelasan urls.py, views.py, models.py, dan berkas html
 
