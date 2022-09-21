@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.film",
+        "pk": 1,
+        "fields": {
+            "watched": true,
+            "title": "Now You See Me",
+            "rating": 7,
+            "release_date": "2013-5-31",
+            "review": "I really enjoyed this movie and it one of my favourites. One point that i really like is that you always have to expect the unexpected because around every twist there is another turn."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 2,
+        "fields": {
+            "watched": false,
+            "title": "War Dogs",
+            "rating": 7,
+            "release_date": "2016-10-7",
+            "review": "The beginning of the film made me think am I going to like this or not? However once the story was set it became a really enjoyable watch."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 3,
+        "fields": {
+            "watched": false,
+            "title": "Knight And Day",
+            "rating": 6,
+            "release_date": "2010-6-23",
+            "review": "A comedic spy movie that held my attention. It was a bit over the top with the fight scenes, but there was never a dull moment."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 4,
+        "fields": {
+            "watched": true,
+            "title": "Baby Driver",
+            "rating": 7,
+            "release_date": "2017-3-11",
+            "review": "This movie is the literal definition of how creative filmmaking can turn a simple and regular story into an exciting thrill ride for the audience."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 5,
+        "fields": {
+            "watched": false,
+            "title": "Johnny English Reborn",
+            "rating": 6,
+            "release_date": "2011-10-7",
+            "review": "It's a silly and ridiculous movie, that's for sure. I can understand why most people don't and wouldn't like it, but it wasn't necessarily bad."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 6,
+        "fields": {
+            "watched": false,
+            "title": "Grown Ups",
+            "rating": 6,
+            "release_date": "2010-6-24",
+            "review": "'Grown Ups' is a pleasant, genial, good-hearted, sometimes icky comedy that's like spending a weekend with well-meaning people you don't want to see again any time real soon."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 7,
+        "fields": {
+            "watched": true,
+            "title": "We're the Millers",
+            "rating": 7,
+            "release_date": "2013-8-3",
+            "review": "Laughed so hard through it that I can't remember the last film that made me feel this good after spending one and a half hours with it."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 8,
+        "fields": {
+            "watched": true,
+            "title": "Spenser Confidential",
+            "rating": 6,
+            "release_date": "2020-3-6",
+            "review": "The movie was simple yet enjoyable. It had a good flow and the actors worked well with each other having good on screen chemistry. I would recommend watching."
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 9,
+        "fields": {
+            "watched": false,
+            "title": "The Hunger Games",
+            "rating": 7,
+            "release_date": "2012-3-12",
+            "review": "Loved the movie! But not better than the book of course!"
+        }
+    },
+    {
+        "model": "mywatchlist.film",
+        "pk": 10,
+        "fields": {
+            "watched": true,
+            "title": "Catch Me If You Can",
+            "rating": 8,
+            "release_date": "2002-12-16",
+            "review": "Outstanding, and 100% entertaining suspense packed thriller. It is a masterpiece of direction with the unmatchable acting skills of DiCaprio and Tom Hanks."
+        }
+    }
+]
