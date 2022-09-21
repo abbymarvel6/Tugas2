@@ -8,6 +8,7 @@ from mywatchlist.views import show_json_by_id
 app_name = 'mywatchlist'
 
 urlpatterns = [
+    path('', show_film, name='show_film'),
     path('html/', show_film, name='show_film'),
     path('xml/', show_xml, name='show_xml'),
     path('json/', show_json, name='show_json'),
