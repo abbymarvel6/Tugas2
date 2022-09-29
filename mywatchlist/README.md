@@ -33,10 +33,10 @@ Data delivery adalah sumber dari informasi yang akan ditampilkan pada suatu plat
 #### Screenshoot dari Postman:
 
 HTML:
-![html](mywatchlist/tugas3html.png)
+![html](tugas3html.png)
 
 XML:
-![html](mywatchlist/tugas3xml.png)
+![html](tugas3xml.png)
 
 JSON:
-![html](mywatchlist/tugas3json.png)
+![html](tugas3json.png)
