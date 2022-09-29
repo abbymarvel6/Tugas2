@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+
+  <style>
+    h1, h5, h2, p {text-align: center;}
+    h1, h5, h2, p , th{color: #4D4771}
+  th {text-align: center;}
+  table, th, td {
+    padding: 0px 50px ;
+    border: 1px solid #ffffff;
+    background-color: #FF9FB2;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tr {background-color: rgba(120, 69, 46, 0.91);}
+
+  body{
+    background-color: #66B9F4;
+    color: rgb(255, 255, 255);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ukuranNama{
+    font-size: 25px;
+  }
+  </style>
+
+  <h1>To Do List</h1>
+
+  <h5>User: </h5>
+  <div class = "ukuranNama"> 
+  <p>{{user}}</p>
+  </div>
+  
+  <br>
+
+  <div class = "container">   
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for item in list_todo %}
+    <tr>
+        <th>{{item.title}}</th>
+        <th>{{item.description}}</th>
+        <th>{{item.date}}</th>
+    </tr>
+    {% endfor %}    
+  </table align="center">
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
+    <button><a href="{% url 'todolist:createtask' %}">Create Task</a></button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+  </div> 
+
+ {% endblock content %}

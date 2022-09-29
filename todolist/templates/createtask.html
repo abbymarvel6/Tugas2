@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Create Task</title>
+{% endblock meta %}
+
+{% block content %}  
+
+<style>
+    h1, h5, h2, p {text-align: center;}
+    h1, h5, h2, p , th{color: #4D4771}
+    th {text-align: center;}
+    div {text-align: center;}
+    
+    table, th, td {
+      background-color: #FF9FB2;
+    }
+    body {
+      margin: 10;
+      background-color: #66B9F4;
+      height:100vh;
+      color:#fff;
+    }
+    </style>
+
+<h1>Create Task</h1>  
+
+    <form method="POST" >  
+        {% csrf_token %}  
+        <table align="center">  
+            <tr>
+                <td>Title: </td>
+                <td>{{form.title}}</td>
+            </tr>
+                    
+            <tr>
+                <td>Description: </td>
+                <td>{{form.description}}</td>
+            </tr>
+            <tr>  
+                <td></td>
+                <td align="center"><input type="submit" name="submit" value="Post"/></td>  
+            </tr>  
+        </table>  
+    </form>
+
+{% if messages %}  
+    <ul>   
+        {% for message in messages %}  
+            <li>{{ message }}</li>  
+            {% endfor %}  
+    </ul>   
+{% endif %}
+
+{% endblock content %}
