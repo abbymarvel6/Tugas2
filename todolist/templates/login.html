@@ -13,36 +13,64 @@
     div {text-align: center;}
     
     table, th, td {
-      background-color: #FF9FB2;
+      background-color: #5C95FF;
+      text-align: center;
+      border-radius: 5px;
     }
+
     body {
-      margin: 10;
-      background-color: #66B9F4;
-      height:100vh;
-      color:#fff;
+    margin: 10;
+    background-color: #B9E6FF;
+    height:100vh;
+    color:#2E2D4D;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     }
+    
+    table {
+        border-style: double;
+        border-color: #2E2D4D;
+    }
+
+
+    input.btn.login_btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #47AB11;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 17px;
+    }
+    
     </style>
 
 <div class = "login">
-
-    <h1>Login</h1>
+    <h1>Eby's Task Manager</h1>
 
     <form method="POST" action="">
         {% csrf_token %}
         <table align="center">
             <tr>
-                <td>Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
             </tr>
                     
             <tr>
-                <td>Password: </td>
                 <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <th><input class="btn login_btn" type="submit" value="Login"></th>
             </tr>
         </table>
     </form>
@@ -55,7 +83,7 @@
         </ul>
     {% endif %}     
         
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+    <h3>Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a> </h3>
 
 </div>
 

@@ -6,60 +6,112 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js%22%3E"></script>
 
   <style>
-    h1, h5, h2, p {text-align: center;}
-    h1, h5, h2, p , th{color: #4D4771}
-  th {text-align: center;}
-  table, th, td {
-    padding: 0px 50px ;
-    border: 1px solid #ffffff;
-    background-color: #FF9FB2;
-    width: 100%;
-    table-layout: fixed;
+    h1, h5, h2, h4, h3, p {text-align: center;}
+    h1, h5, h2, h4, h3, p , th{color: #4D4771}
+    th {text-align: center;}
+    table, th, td {
+      padding: 0px 50px ;
+      border: 1px solid #ffffff;
+      background-color: #5C95FF;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+  a {
+    color: #FFFFFF;
+    text-align: center;
   }
 
   tr {background-color: rgba(120, 69, 46, 0.91);}
 
   body{
-    background-color: #66B9F4;
-    color: rgb(255, 255, 255);
+    margin: 10;
+    background-color: #B9E6FF;
+    color:#2E2D4D;
     display: grid;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .ukuranNama{
     font-size: 25px;
   }
+
+  .button{
+    align-items: center;
+  }
+
+  .button-create {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #47AB11;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 17px;
+    }
+
+    .button-logout {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #f34809;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 17px;
+    }
+
+    .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+    }
   </style>
 
-  <h1>To Do List</h1>
+  <h1>Eby's Task Manager</h1>
+  <h2>User: {{user}}</h2>
 
-  <h5>User: </h5>
-  <div class = "ukuranNama"> 
-  <p>{{user}}</p>
-  </div>
-  
   <br>
-
   <div class = "container">   
   <table>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Date</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
     {% for item in list_todo %}
     <tr>
-        <th>{{item.title}}</th>
-        <th>{{item.description}}</th>
-        <th>{{item.date}}</th>
+      <div class="card">
+        <div class="container">
+          <h3>{{item.title}}</h3>
+          <p>{{item.description}}</p>
+          <h5>{{item.date}}</h5>
+        </div>
+      </div>
     </tr>
+    <p></p>
     {% endfor %}    
   </table align="center">
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
-    <button><a href="{% url 'todolist:createtask' %}">Create Task</a></button>
-    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    <h3>Sesi terakhir login: {{ last_login }}</h3>
+    <div align="center">
+      <button class="button-create"><a href="{% url 'todolist:createtask' %}">Create Task</a></button>
+      <button class="button-logout"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
   </div> 
 
  {% endblock content %}

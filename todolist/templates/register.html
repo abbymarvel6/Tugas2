@@ -7,34 +7,63 @@
 {% block content %}
 
 <style>
-    h1, h5, h2, p {text-align: center;}
-    h1, h5, h2, p , th{color: #4D4771}
+    h1, h3, h2, p {text-align: center;}
+    h1, h3, h2, p , th{color: #4D4771}
     th {text-align: center;}
     div {text-align: center;}
     
     table, th, td {
-      background-color: #FF9FB2;
+      background-color: #5C95FF;
+      text-align: center;
+      border-radius: 5px;
     }
+
     body {
-      margin: 10;
-      background-color: #66B9F4;
-      height:100vh;
-      color:#fff;
+    margin: 10;
+    background-color: #B9E6FF;
+    height:100vh;
+    color:#2E2D4D;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     }
+
+    input.btn.submit_btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #47AB11;
+        color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 17px;
+    }
+    
     </style>
 
 <div class = "login">
     
-    <h1>Formulir Registrasi</h1>  
+    <h1>Eby's Task Manager</h1>  
+
+    <h3>Formulir Registrasi</h3>
 
         <form method="POST" >  
             {% csrf_token %}  
             <table align="center">  
                 {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
+                <tr>
+                    <td>
+                        <th><input class="btn submit_btn" type="submit" value="submit"></th>
+                    </td>
+                </tr>
             </table>  
         </form>
 
