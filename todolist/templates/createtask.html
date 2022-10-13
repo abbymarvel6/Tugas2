@@ -24,6 +24,8 @@
       color:#fff;
     }
 
+
+
     input.btn.post-btn {
         outline: none;
         border: none;
@@ -33,6 +35,20 @@
         text-align: center;
         background-color: #47AB11;
         color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 17px;
+    }
+
+    button.cancel-btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #d21b1b;
+        color: #ffffff;
         border-radius: 4px;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         font-size: 17px;
@@ -57,6 +73,7 @@
             <tr>
                 <td>
                     <th><input class="btn post-btn" type="submit" value="Post"></th>
+                    <th><button class="cancel-btn"><a href="{% url 'todolist:show_todolist' %}" style="color:rgb(255, 255, 255); text-decoration: none">Cancel</a></button></th>
                 </td>
             </tr>
         </table>  

@@ -1,5 +1,6 @@
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.core import serializers
 from django.urls import reverse
 from django.shortcuts import render
 from todolist.models import task
@@ -70,3 +71,20 @@ def create_task(request):
 
     context = {'form':form}
     return render(request, 'createtask.html', context)
+
+def toggle(request, id):
+    data = task.objects.get(pk = id)
+    data.is_finished = not data.is_finished
+    data.save()
+    response = HttpResponseRedirect(reverse("todolist:show_todolist"))
+    return response
+
+def delete(request, id):
+    data = task.objects.get(pk = id)
+    data.delete()
+    response = HttpResponseRedirect(reverse("todolist:show_todolist"))
+    return response
+
+def show_json(request):
+    data_todolist = task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data_todolist), content_type="application/json")
